@@ -3,12 +3,12 @@ gvinstall(){
 pkg install -y screen
 if [ ! -e gost ]; then
 echo "下载中……"
-curl -L -o gost_3.2.7-nightly.20251122_linux_arm64.tar.gz -# --retry 2 --insecure https://github.com/go-gost/gost/releases/download/v3.2.7-nightly.20251122/gost_3.2.7-nightly.20251122_linux_arm64.tar.gz
+curl -L -o gost_3.2.7-nightly.20251122_linux_arm64.tar.gz -# --retry 2 --insecure https://raw.githubusercontent.com/hallfay0/google-vpn/main/gost_3.2.7-nightly.20251122_linux_arm64.tar.gz
 tar zxvf gost_3.2.7-nightly.20251122_linux_arm64.tar.gz
 fi
 if [ ! -e gost ]; then
 echo "当前网络无法链接Github，切换中转下载"
-curl -L -o gost_3.2.7-nightly.20251122_linux_arm64.tar.gz -# --retry 2 --insecure https://gh-proxy.com/https://github.com/go-gost/gost/releases/download/v3.2.7-nightly.20251122/gost_3.2.7-nightly.20251122_linux_arm64.tar.gz
+curl -L -o gost_3.2.7-nightly.20251122_linux_arm64.tar.gz -# --retry 2 --insecure https://gh-proxy.com/https://raw.githubusercontent.com/hallfay0/google-vpn/main/gost_3.2.7-nightly.20251122_linux_arm64.tar.gz
 tar zxvf gost_3.2.7-nightly.20251122_linux_arm64.tar.gz
 fi
 if [ ! -e gost ]; then
