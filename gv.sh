@@ -11,9 +11,13 @@ echo "当前网络无法链接Github，切换中转下载"
 curl -L -o gost_3.2.7-nightly.20251122_linux_arm64.tar.gz -# --retry 2 --insecure https://gh-proxy.com/https://raw.githubusercontent.com/hallfay0/google-vpn/main/gost_3.2.7-nightly.20251122_linux_arm64.tar.gz
 tar zxvf gost_3.2.7-nightly.20251122_linux_arm64.tar.gz
 fi
+fi
 if [ ! -e gost ]; then
 echo "下载失败，请在代理环境下运行脚本" && exit
 fi
+# 下载脚本文件以供后续使用
+curl -L -o gv.sh https://raw.githubusercontent.com/hallfay0/google-vpn/main/gv.sh
+chmod +x gv.sh
 rm -f gost_3.2.7-nightly.20251122_linux_arm64.tar.gz README* LICENSE* config.yaml
 socks_port=41111
 http_port=42222

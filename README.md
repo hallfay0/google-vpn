@@ -18,16 +18,19 @@
 ## 安装步骤
 
 1. 打开 Termux。
-2. 克隆本仓库或下载 `gv.sh` 脚本到本地。
+2. 复制并运行以下一键安装脚本（任选其一）：
+
+   **GitHub 源（推荐）：**
    ```bash
-   git clone https://github.com/hallfay0/google-vpn.git
-   cd google-vpn
+   bash <(curl -Ls https://raw.githubusercontent.com/hallfay0/google-vpn/main/gv.sh)
    ```
-3. 运行脚本：
+
+   **加速源（如果无法访问 GitHub）：**
    ```bash
-   bash gv.sh
+   bash <(curl -Ls https://gh-proxy.com/https://raw.githubusercontent.com/hallfay0/google-vpn/main/gv.sh)
    ```
-4. 在菜单中输入 `1` 并回车，开始安装。
+
+3. 在菜单中输入 `1` 并回车，开始安装。
    - 脚本会自动安装 `screen`。
    - 自动下载适配的 `gost` 核心文件。
    - 配置并启动代理服务。
